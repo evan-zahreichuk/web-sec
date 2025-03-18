@@ -50,4 +50,16 @@ public class CarService {
     public Car update(Car car) {
         return carRepository.save(car);
     }
+
+    public List<Car> getByBrand(String brand) {
+        return carRepository.findByBrand(brand);
+    }
+
+    public List<Car> getByModel(String model) {
+        return carRepository.findByModel(model);
+    }
+
+    public long countCars() {
+        return carRepository.count();
+    }
 }

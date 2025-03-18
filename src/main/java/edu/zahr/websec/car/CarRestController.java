@@ -14,7 +14,7 @@ import java.util.List;
 */
 
 @RestController
-@RequestMapping("/api/v1/items")
+@RequestMapping("/api/v1/cars")
 @AllArgsConstructor
 
 public class CarRestController {
@@ -41,6 +41,20 @@ public class CarRestController {
     public Car update(@RequestBody Car car) {
         return service.update(car);
     }
+    @GetMapping("/brand/{brand}")
+    public List<Car> getCarsByBrand(@PathVariable String brand) {
+        return service.getByBrand(brand);
+    }
+
+    @GetMapping("/model/{model}")
+    public List<Car> getCarsByModel(@PathVariable String model) {
+        return service.getByModel(model);
+    }
+    @GetMapping("/count")
+    public long getCarCount() {
+        return service.countCars();
+    }
+
 
     }
 

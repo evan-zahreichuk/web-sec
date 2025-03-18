@@ -1,0 +1,48 @@
+### GET All Cars
+GET http://localhost:8080/api/v1/cars
+
+###
+
+### GET ONE ITEM
+GET http://localhost:8080/api/v1/cars/2
+
+###
+
+### DELETE ONE ITEM
+DELETE http://localhost:8080/api/v1/cars/3
+
+###
+
+### CREATE ONE ITEM
+POST http://localhost:8080/api/v1/cars
+Content-Type: application/json
+
+{
+  "brand": "BMW",
+  "model": "Universal",
+  "color": "Blue"
+}
+### UPDATE ONE ITEM
+PUT http://localhost:8080/api/v1/cars
+Content-Type: application/json
+
+{
+  "id": "2",
+  "brand": "name22",
+  "model": "model",
+  "color": "Black"
+}
+
+
+### GET Car by brand
+GET http://localhost:8080/api/v1/cars/brand/BMW
+
+### GET Car by model
+GET http://localhost:8080/api/v1/cars/model/Van
+
+### GET Car by brand
+GET http://localhost:8080/api/v1/cars/count
+
+
+
+###
